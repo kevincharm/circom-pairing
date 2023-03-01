@@ -17,7 +17,7 @@ import {
   Fp, Fr, Fp2, Fp12, CURVE, ProjectivePoint,
   map_to_curve_simple_swu_9mod16, isogenyMapG2,
   millerLoop, psi, psi2, calcPairingPrecomputes, mod
-} from './math.js';
+} from './math';
 export { Fp, Fr, Fp2, Fp12, CURVE };
 
 type Hex = Uint8Array | string;
@@ -42,7 +42,7 @@ const htfDefaults = {
   // DST: a domain separation tag
   // defined in section 2.2.5
   // Use utils.getDSTLabel(), utils.setDSTLabel(value)
-  DST: "BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_POP_",
+  DST: "BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_NUL_",
   // p: the characteristic of F
   //    where F is a finite field of characteristic p and order q = p^m
   p: CURVE.P,
